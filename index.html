@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Soccer 2D</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="game-container">
+        <!-- Canvas do Jogo -->
+        <canvas id="gameCanvas"></canvas>
+
+        <!-- Menu Principal -->
+        <div id="main-menu" class="menu-screen">
+            <h1>Car Soccer 2D</h1>
+            
+            <!-- Entrada de Nomes -->
+            <div class="names-container">
+                <div class="input-group">
+                    <label for="p1-name-input">Jogador 1 (Azul):</label>
+                    <input type="text" id="p1-name-input" placeholder="Nome P1" maxlength="12" value="JOGADOR 1">
+                </div>
+                <div class="input-group">
+                    <label for="p2-name-input">Jogador 2 (Laranja):</label>
+                    <input type="text" id="p2-name-input" placeholder="Nome P2" maxlength="12" value="JOGADOR 2">
+                </div>
+            </div>
+
+            <div class="menu-buttons">
+                <button id="btn-play" class="btn">Começar Partida</button>
+                <button id="btn-custom" class="btn btn-secondary">Personalizar Visual</button>
+                <button id="btn-instructions" class="btn btn-secondary">Instruções</button>
+            </div>
+        </div>
+
+        <!-- Menu de Personalização -->
+        <div id="custom-menu" class="menu-screen hidden">
+            <h2>Personalização</h2>
+            
+            <div class="custom-container">
+                <!-- Jogador 1 -->
+                <div class="player-custom">
+                    <h3>Jogador 1 (A, D, S, W, Espaço)</h3>
+                    <p>Cor do Carro:</p>
+                    <div id="colors-p1" class="color-picker"></div>
+                    <p>Cor do Boost:</p>
+                    <div id="boost-colors-p1" class="color-picker"></div>
+                </div>
+
+                <!-- Jogador 2 -->
+                <div class="player-custom">
+                    <h3>Jogador 2 (Setas + Enter)</h3>
+                    <p>Cor do Carro:</p>
+                    <div id="colors-p2" class="color-picker"></div>
+                    <p>Cor do Boost:</p>
+                    <div id="boost-colors-p2" class="color-picker"></div>
+                </div>
+            </div>
+
+            <button id="btn-back-custom" class="btn">Voltar ao Menu</button>
+        </div>
+
+        <!-- Menu de Instruções -->
+        <div id="instructions-menu" class="menu-screen hidden">
+            <h2>Como Jogar</h2>
+            <div class="instructions-container">
+                <h3>Jogador 1 (Azul)</h3>
+                <p><strong>A / D:</strong> Mover para Esquerda / Direita</p>
+                <p><strong>S:</strong> Ré</p>
+                <p><strong>W:</strong> Pular</p>
+                <p><strong>Espaço:</strong> Usar Turbo (Boost)</p>
+
+                <h3>Jogador 2 (Laranja)</h3>
+                <p><strong>Seta Esquerda / Direita:</strong> Mover</p>
+                <p><strong>Seta para Baixo:</strong> Ré</p>
+                <p><strong>Seta para Cima:</strong> Pular</p>
+                <p><strong>Enter:</strong> Usar Turbo (Boost)</p>
+            </div>
+            <button id="btn-back-instructions" class="btn">Voltar ao Menu</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
